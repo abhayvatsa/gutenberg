@@ -1,0 +1,16 @@
+---
+publishTime: 03.01.20
+summary: Rebooting my blog with technologies de jour.
+keywords: ['web', 'react', 'blog']
+---
+# Rebooting my blog
+
+## Why now?
+
+It's a story as old as time. A software engineer decides to build a bespoke website on a branded domain to start a blog. They proceed to write a few posts and never look at it again. I know it well because that's how my previous personal blog went down. So, why spend _all that effort_ for a few posts? Why wouldn't people just use Medium? Well, writing the software is half the fun. It feels rewarding to have a creative outlet to control the presentation of your thoughts. Additionally, I'm tired of the paywalls, required logins, advertisements, excessive branding elements that get in the way of content on sites like Medium, Facebook, Twitter. They add up to a really poor user experience.
+
+At work, I've recently moved teams and I'm doing much more frontend work. For the last few years I'd been avoiding frontend work in favor of working on backend services for cloud infrastructure. I quickly found myself excited about hacking around with web technologies and I wanted to build something from scratch (w.r.t. styling/design). I also wanted to experiment with [Next.js](https://nextjs.org/docs/getting-started), [MDX](https://github.com/mdx-js/mdx), [remark plugins](https://github.com/remarkjs/remark/blob/master/doc/plugins.md#list-of-plugins) and various CSS in JS libraries. I'm intrigued by some of the recent trends toward precompilation and [static exporting](https://nextjs.org/features/static-exporting) in addition to the flexibility of MDX to pull in React components. I think they can all add up to a really good user experience - for both the reader and the writer.
+
+## Looking forward
+
+I'm excited to share my thoughts here and will continue to make improvements on the software. Thanks for reading :).

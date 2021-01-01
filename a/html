@@ -1,0 +1,17 @@
+---
+publishTime: 01.01.21
+summary: Some great HTML snippets 
+keywords: ['html']
+type: snippet
+---
+# HTML
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+  </body>
+</html>
+```

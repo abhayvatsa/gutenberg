@@ -1,0 +1,23 @@
+---
+publishTime: 12.31.20
+summary: Photos first. A minimalistic photo experience on the web with a focus on performance.
+keywords: ['project', 'photos', 'performance']
+type: project
+---
+# 📸 Vatsagram
+
+A minimalistic, unbranded, performant web application for photos. Written in React, TypeScript and Next.js. Using Sharp for image processing. Deployed on Vercel.
+
+**Links**:
+
+- [Source Code](https://github.com/abhayvatsa/vatsagram)
+- See it live at: https://vatsagram.com
+
+**Optimizations**:
+
+- [x] Blur Up technique: server rendered low res b64 images with gaussian blur
+- [x] lazy loading, intersection observer
+- [x] srcset with a range of sizes, appropriately compressed images
+- [x] support webp, jpeg, (avif??)
+- [ ] Do add'l optimizations [listed here](https://www.industrialempathy.com/posts/image-optimizations/)
+- [ ] Modal for post page (when routed on client-side)

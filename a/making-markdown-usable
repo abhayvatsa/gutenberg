@@ -1,0 +1,80 @@
+---
+publishTime: 03.09.20
+summary: Enhancing markdown is so much easier than I thought. Enter MDX, plugins and ASTs.
+keywords: ['markdown', 'react', 'MDX']
+---
+# Making Markdown Usable!
+
+🚧 🚨 This is a brain dump; has not been proofread. 🚨 🚧
+
+## Table of Contents
+
+## The Past
+
+
+If you're like me you've used markdown for a long time. Maybe you first saw it on GitHub or found it in the source code of one of your favorite libraries. I remember when I first used markdown, I instantly saw the value proposition. In my view, the three biggest pros for markdown are:
+
+1. It has an open specification. No more sharing slow-opening, proprietary document formats like Microsoft Word docs and Adobe PDFs. Very portable docs.
+2. It has a lightweight markup language that is human readable. The syntax visually resembles the corresponding HTML and doesn't require a rich text editor to edit/review/display.
+3. It's straightforward to learn and expressive. Writing `# My Title`  and `## My Title` is visually easy to spot and easy to `grep` for.
+
+If you're also like me, you've tried different publishing solutions over the years. Here were some of the things I've used over the years:
+
+| Tool                                                                                     | Why?                                          | Pros                                                             | Cons                                                    |
+| ---------------------------------------------------------------------------------------- | --------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------- |
+| GitHub `README.md`                                                                       | I was already using GitHub/Git                | Free from PDFs and Word docs. Also syntax highlighting           | The UX navigating interlinked markdown files is awful.  |
+| [react-markdown](https://github.com/rexxars/react-markdown)                              | I built a markdown-powered blog               | All the flexibility/power you need. Easy to understand.          | Everything was custom written, hosted.                  |
+| [GitBook](https://github.com/GitbookIO/gitbook)                                          | A new project/team at work. No docs written.  | Nice UI/default theme. Can publish to PDF (had to once!)         | Need to self host GitBook for proprietary info.         |
+| [GitHub Wiki](https://help.github.com/en/github/building-a-strong-community/about-wikis) | I didn't want to self-host the docs           | No need to host by self.                                         | Not the best UX, search is lacking                      |
+| [GitHub Pages](https://pages.github.com/)                                                | I wanted better theming over previous options | No need to self host, Jekyll is built in, themes are easy to use | As a React developer, I don't like templating languages |
+
+Looking back, I could have done a better job of vetting potential alternatives before committing to an option. The way I've processed this journey is: each stage served the purpose of growing my skills as a developer. Parallel to each of the efforts there was some programming. This ranged from buying a domain and writing some CSS (react-markdown), writing some ansible to provision a server(GitBook), experimenting a bit with CSS (GitHub Pages). At the end of the day, all of these docs were written in markdown and as very portable.
+
+## The Present
+
+Today, it's pretty trendy to use MDX. I find myself at a nexus where I want improve my skills as a web developer. as providing some unique features I want to experiment with.
+
+**MDX**
+
+Much like you can write HTML in a markdown document, you can write JSX within a MDX document. MDX is a nifty markdown extension that lets you draw React components within your markdown. You can embed React components (like below) within your MDX document.
+
+```tsx
+<div
+  onClick={() => alert('Hi there!')}
+  style={{
+    backgroundColor: 'tomato',
+    display: 'flex',
+    justifyContent: 'center',
+    color: 'white',
+    marginBottom: '1rem',
+  }}
+>
+  <h1 style={{ margin: '24px 24px' }}>Click Me!</h1>
+</div>
+```
+
+
+<div
+  onClick={() => alert("Hi there!")}
+  style={{
+    backgroundColor: "tomato",
+    display: "flex",
+    justifyContent: "center",
+    color: "white",
+    marginBottom: "1rem"
+  }}>
+ <h1 style={{margin: "24px 24px"}}>Click Me!</h1>
+</div>
+
+Now, this may not seem very impressive, but you can also _import_ React components into your MDX, and pass it some parameters. With these React components you can use reusable behavior of the coupled JS/HTML/CSS to have stateful, interactive components that can query external APIs. Imagine having interactive React components displaying _live_ data, all contained within a MDX document. It's powerful!
+
+**Plugins!**
+
+https://github.com/remarkjs/remark remark-external-links remark-capitalize remark-emoji
+syntax highlighting
+
+## The Future
+
+> "If you optimize everything, you will always be unhappy." - Donald Knuth
+
+One of the first lessons in engineering and computer science (and maybe life in general?) is that you can't optimize for everything. Markdown/MDX is a medium that can present well on the web. Since it is human-readable plain text, it can easily be checked into your version control, grepped, diffed, statically compiled and displayed on responsive screen sizes. Some of the limitations of this plain-text format include: you can't easily upload file attachments such as PDFs, images, screenshots such as in programs like Apple Notes, Confluence
