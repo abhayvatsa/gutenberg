@@ -16,6 +16,7 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       <Head>
         <title>{title}</title>
         <meta name="description" content={summary} />
+        <meta property="og:title" content={summary} />
       </Head>
       <style jsx>{`
         margin: 16px;
