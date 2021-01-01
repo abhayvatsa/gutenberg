@@ -1,8 +1,15 @@
 # Gutenberg
 
-A site generator for markdown/MDX documents.
+**Very much a work in progress**
 
-See it live at https://abhayvatsa.com
+A site generator for markdown/MDX documents. See it live at
+https://abhayvatsa.com
+
+## Goal
+
+Expose an easy interface to publish markdown/MDX documents with a core library
+of React components. Additionally, provide a good user experience and integrate
+with analytics, [Open Graph](https://ogp.me/), etc.
 
 ## Features
 
@@ -55,8 +62,7 @@ I have ambitions to:
 
 - Add offline-search
 - Improve the interface/documentation to gutenberg
-- Add more error handling,
-- Add tests
-- Styling: Improve design, increase legibility, ensure layout works with
-  different content length
+- Add more error handling & add tests
+- Styling: Improve design, increase legibility, ensure layout works varying
+  content length
 - Provide generic components (like charts, etc) usable in markdown
