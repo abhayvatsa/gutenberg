@@ -6,6 +6,8 @@ type: snippet
 ---
 # HTML
 
+This is just a random snippet for demo purposes.
+
 ```html
 <!DOCTYPE html>
 <html>
