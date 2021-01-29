@@ -41,7 +41,7 @@ can specify YAML frontmatter per below specification.
 - **Site elements**:
   - `headline`: Headline for `<Hero />` component
   - `subheadline`: Subheadline for `<Hero />` component
-  - `sections`: Array that defines <Preview /> sections on home page
+  - `sections`: Array that defines `<Preview />` sections on home page
     - schema: [{ title: "Title", filter: `${type}` }"
     - e.g.
       `[{title: 'Posts', filter='project'}, [{title: 'Recent OtherTypes', filter='othertype'}]`
