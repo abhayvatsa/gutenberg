@@ -23,7 +23,6 @@
     "@types/react": "^17.0.0",
     "@types/react-ga": "^2.3.0",
     "@types/styled-jsx": "^2.2.8",
-    "gfm": "0.0.1",
     "gray-matter": "^4.0.2",
     "remark": "^13.0.0",
     "remark-breaks": "^2.0.1",
