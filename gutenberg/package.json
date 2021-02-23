@@ -1,14 +1,16 @@
 {
   "name": "next-gutenberg",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "bin": {
-    "gutenberg": "bin/index.js"
+    "gutenberg": "bin/index.js",
+    "gutenberg-dev": "next dev",
+    "gutenberg-build": "next start"
   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "gutenberg": "bin/index.js",
+    "abhay": "next dev",
     "typecheck": "tsc --noemit && tsc --noemit"
   },
   "dependencies": {

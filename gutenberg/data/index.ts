@@ -4,7 +4,7 @@ import { promisify } from 'util'
 const readFile = promisify(fs.readFile)
 const readdir = promisify(fs.readdir)
 import { getHeading } from '../plugins/'
-export const articleDir = `../a`
+export const articleDir = `./a/`
 
 export async function getArticles() {
   const filenames = await getArticleFilenames()
