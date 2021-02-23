@@ -1,0 +1,8 @@
+{
+  "/404": "pages/404.js",
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/a/[filename]": "pages/a/[filename].js",
+  "/": "pages/index.js",
+  "/_error": "pages/_error.js"
+}
