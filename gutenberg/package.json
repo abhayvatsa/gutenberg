@@ -1,7 +1,10 @@
 {
-  "name": "gutenberg",
-  "version": "0.1.0",
-  "private": true,
+  "name": "next-gutenberg",
+  "version": "1.0.14",
+  "bin": {
+    "gutenberg": "bin/index.js"
+  },
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -16,9 +19,7 @@
     "react-dom": "17.0.1",
     "react-ga": "^3.3.0",
     "react-typography": "^0.16.19",
-    "typography": "^0.16.19"
-  },
-  "devDependencies": {
+    "typography": "^0.16.19",
     "@types/node": "^14.14.16",
     "@types/react": "^17.0.0",
     "@types/react-ga": "^2.3.0",
