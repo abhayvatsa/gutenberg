@@ -28,6 +28,10 @@ export default css.global`
   h2 {
     color: rgba(var(--primary-foreground), 1);
   }
+  h2 {
+    padding-bottom: 7px;
+    border-bottom: 1px solid rgba(var(--primary-foreground), 0.5);
+  }
 
   h3,
   h4,

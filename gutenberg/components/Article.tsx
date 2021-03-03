@@ -5,7 +5,8 @@ import vsDark from 'prism-react-renderer/themes/vsDark' // https://github.com/Pr
 
 // See: https://mdxjs.com/guides/syntax-highlighting#prism-react-renderer
 const CodeBlock = ({ children, className }) => {
-  const language = className.replace(/language-/, '')
+  const language = className?.replace(/language-/, '')
+
   return (
     <Highlight
       {...defaultProps}
@@ -15,13 +16,17 @@ const CodeBlock = ({ children, className }) => {
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={className} style={{ ...style, padding: '20px' }}>
-          {tokens.map((line, i) => (
-            <div key={i} {...getLineProps({ line, key: i })}>
-              {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token, key })} />
-              ))}
-            </div>
-          ))}
+          {
+            // TODO: this slicing needs to be less hacky (why does an extra
+            // token exist?)
+            tokens.slice(0, tokens.length - 1).map((line, i) => (
+              <div key={i} {...getLineProps({ line, key: i })}>
+                {line.map((token, key) => (
+                  <span key={key} {...getTokenProps({ token, key })} />
+                ))}
+              </div>
+            ))
+          }
         </pre>
       )}
     </Highlight>

@@ -1,10 +1,15 @@
 import { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
+import router from 'next/router'
 import renderToString from 'next-mdx-remote/render-to-string'
 import { mdxOptions } from '../../plugins/options'
 import { getArticleFilenames, getFile } from '../../data'
 import { articleDir } from '../../data/' //TODO, move this to getFile, etc
 import Article, { components } from '../../components/Article'
+
+if (process.browser) {
+  window.onfocus = () => router.replace(router.asPath)
+}
 
 const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   source,
@@ -50,8 +55,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     components,
     mdxOptions,
   })
+  console.log(`refreshing '${rest.title}': len:${content.length}.`)
 
-  return { props: { source: mdxSource, ...rest } }
+  return { props: { source: mdxSource, ...rest }, revalidate: 1 }
 }
 
 export default ArticlePage
