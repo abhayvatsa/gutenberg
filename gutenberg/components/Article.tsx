@@ -1,7 +1,30 @@
+import { useState } from 'react'
 import Link from 'next/link'
 import hydrate from 'next-mdx-remote/hydrate'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import vsDark from 'prism-react-renderer/themes/vsDark' // https://github.com/PrismJS/prism-themes
+
+const PopQuestion = ({ question, answer }) => {
+  const [showAnswer, setShowAnswer] = useState(false)
+
+  const [title, text] = showAnswer
+    ? [`Answer`, `${answer}`]
+    : [`Question`, `${question}`]
+  return (
+    <div
+      onClick={() => setShowAnswer(!showAnswer)}
+      style={{
+        backgroundColor: 'lightcoral',
+        display: 'flex',
+        justifyContent: 'center',
+        color: 'black',
+        marginBottom: '.75rem',
+      }}
+    >
+      <h1 style={{ margin: '24px 24px' }}>{`${title}: ${text}`}</h1>
+    </div>
+  )
+}
 
 // See: https://mdxjs.com/guides/syntax-highlighting#prism-react-renderer
 const CodeBlock = ({ children, className }) => {
@@ -65,6 +88,7 @@ export const components = {
   h1: Heading1,
   a: NextLink,
   code: CodeBlock,
+  PopQuestion,
 }
 
 const Article = ({ source }) => {
