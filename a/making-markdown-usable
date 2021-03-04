@@ -33,7 +33,7 @@ Today, I am interested in having a bit more control of markdown documents. More 
 
 **MDX**
 
-Much like you can write *HTML* in a *markdown* document, you can write *JSX* within an *MDX* document. MDX is a nifty markdown extension that lets you include React components within your markdown. You can embed React components (like below) within your MDX document. Imagine having components like `<FunFact/>`, `<Chart/>`, `<Video/>` and `<PopQuestion/>`. They encapsulate styling and interactivity in a simple API for authors. See a snippet below for an example. 
+Much like you can write *HTML* in a *markdown* document, you can write *JSX* within an *MDX* document. MDX is a nifty markdown extension that lets you include React components within your markdown. You can embed React components (like below) within your MDX document. Imagine having components like `<FunFact/>`, `<Chart/>`, `<Video/>` and `<PopQuestion/>`. They encapsulate styling and interactivity in a simple API for authors. See a snippet below for an example.
 
 ```jsx
 // This kind of code can be embedded directly in an MDX document
@@ -43,6 +43,7 @@ Much like you can write *HTML* in a *markdown* document, you can write *JSX* wit
 />
 
 // See below for an example of the React component above ^
+// Click it!!!
  ```
 
 <PopQuestion
