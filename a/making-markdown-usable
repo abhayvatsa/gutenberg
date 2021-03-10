@@ -33,25 +33,23 @@ Today, I am interested in having a bit more control of markdown documents. More 
 
 **MDX**
 
-Much like you can write *HTML* in a *markdown* document, you can write *JSX* within an *MDX* document. MDX is a nifty markdown extension that lets you include React components within your markdown. You can embed React components (like below) within your MDX document. Imagine having components like `<FunFact/>`, `<Chart/>`, `<Video/>` and `<PopQuestion/>`. They encapsulate styling and interactivity in a simple API for authors. See a snippet below for an example.
+Much like you can write *HTML* in a *markdown* document, you can write *JSX* within an *MDX* document. MDX is a nifty syntax extension for markdown that enables including React components within markdown. Imagine being able to include components like `<FunFact/>`, `<Chart/>`, `<Video/>` and `<PopQuestion/>` to increase interactivity of your plain-text documents. The components can encapsulate state, styling and interactivity in a simple API for authors. Let's look at what a `<PopQuestion />` might look like!
 
 ```jsx
-// This kind of code can be embedded directly in an MDX document
+<PopQuestion
+  question="Who originally proposed MDX?"
+  answer="Guillermo Rauch (@rauchg)"
+/>
+```
+
+**Click below** and see the interactivity provided by the source code above. Simple isn't it?
+
 <PopQuestion
   question="Who originally proposed MDX?"
   answer="Guillermo Rauch (@rauchg)"
 />
 
-// See below for an example of the React component above ^
-// Click it!!!
- ```
-
-<PopQuestion
-  question="Who originally proposed MDX?"
-  answer="Guillermo Rauch (@rauchg)"
-/>
-
-With these embedded React components you could even query external APIs. Imagine having interactive React components displaying _live_ data, all contained within an MDX document. It's powerful!
+With these embedded React components you could even query external APIs. Imagine having interactive React components displaying _live_ data, all contained within an MDX document. Given a library of a few React components, an author could have the power to author fairly engaging documents with minimal code.
 
 **Remark**
 
