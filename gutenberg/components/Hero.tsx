@@ -32,7 +32,7 @@ const Hero = ({ headline, text, about = false }) => {
       </section>
       {about && (
         <Link href="/a/about">
-          <a>About</a>
+          <a>About Me</a>
         </Link>
       )}
     </>
